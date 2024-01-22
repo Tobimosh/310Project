@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Medication Reminder</title>
+    <link rel="stylesheet" href="login.css">
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Log In</h1>
+        <form id="loginForm" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Log In</button>
+        </form>
+        <div id="loader" class="loader"></div>
+
+        <p>Don't have an account? <a href="/views/SIGNUP/signup.html">Sign Up</a></p>
+    </div>
+    <script src="./login.js"></script>
+
+</body>
+
+</html>

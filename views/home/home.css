@@ -1,0 +1,140 @@
+
+
+
+body {
+    background-image: url("/views/home/Images/bgImage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #558af5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input,
+button {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #558af5;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#additionalInfo{
+    margin-bottom: 10px;
+    padding: 1rem;
+    line-height: 1.2rem;
+}
+
+button:hover {
+    background-color: #4469d8;
+}
+
+button:focus {
+    background-color: #3353a5;
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    color: #fff;
+    padding: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+footer {
+    padding: 15px;
+    width: 100%;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo-container span {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-container span {
+        margin-top: 10px;
+    }
+}
