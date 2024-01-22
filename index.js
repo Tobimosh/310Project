@@ -22,7 +22,7 @@ webpush.setVapidDetails(
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "views")));
-app.use(cors()); // Enable CORS for all routes
+app.use(cors()); 
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, "static")));
@@ -135,7 +135,6 @@ app.get("/medications", verfiyToken, async (req, res) => {
     });
 
     res.send(userMedications)
-    // res.render("medications", { medications: userMedications });
   } catch (error) {
     console.error(error);
     return res.status(500).send("Internal Server Error");

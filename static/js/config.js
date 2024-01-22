@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { date, number } = require("zod");
 
 const connect = mongoose.connect(
   "mongodb+srv://oluwatobimoshood16:mosh1234@cluster0.itu8aie.mongodb.net/?retryWrites=true&w=majority"

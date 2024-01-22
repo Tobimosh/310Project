@@ -117,11 +117,10 @@ function storeMedDetails(medicationName, reminderTime, grams, additionalInfo) {
       if (res.status === 200) {
         alert("Your med reminder has been set! You will be notified in due time");
       } else {
-        return res.json(); // Only parse JSON if the response status is not 200
+        return res.json(); 
       }
     })
     .then((data) => {
-      // Process the JSON data if needed
       console.log("Server response:", data);
     })
     .catch((error) => {
