@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const { date, number } = require("zod");
-// Mongoose is an object document mapping (ODM) layer which sits on the top of Node’s MongoDB driver.
 
 const connect = mongoose.connect(
   "mongodb+srv://oluwatobimoshood16:mosh1234@cluster0.itu8aie.mongodb.net/?retryWrites=true&w=majority"

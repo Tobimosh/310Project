@@ -1,6 +1,6 @@
 const fetchData = async () => {
   try {
-    const response = await fetch("http://localhost:9000/medications", {
+    const response = await fetch("/medications", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

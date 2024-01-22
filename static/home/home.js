@@ -98,7 +98,7 @@ async function send(medicationName) {
 
 
 function storeMedDetails(medicationName, reminderTime, grams, additionalInfo) {
-  fetch("http://localhost:9000/addMedication", {
+  fetch("/addMedication", {
     method: "POST",
     body: JSON.stringify({
       medicationName: medicationName,
