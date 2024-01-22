@@ -40,7 +40,7 @@ const UserSchema = new mongoose.Schema({
 });
 
 const medSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // Reference to the User model
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, 
   medicationName: {
     type: String,
     required: true,

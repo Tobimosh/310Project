@@ -47,9 +47,9 @@ async function send(medicationName) {
   console.log(medicationName);
   console.log("Registering service worker");
   const register = await navigator.serviceWorker.register(
-    "./service-worker.js",
+    "service-worker.js",
     {
-      scope: "/views/home/",
+      scope: "/home/",
     }
   );
   console.log("Service worker registered...");
@@ -62,7 +62,7 @@ async function send(medicationName) {
   console.log("Push registered.....");
 
   console.log("sending push notifications");
-  await fetch("http://localhost:9000/subscribe", {
+  await fetch("/subscribe", {
     method: "POST",
     body: JSON.stringify({
       subscription: subscription,
@@ -74,31 +74,6 @@ async function send(medicationName) {
   });
   console.log("push sent;");
 }
-
-// function storeMedDetails(medicationName, reminderTime, grams, additionalInfo) {
-//   fetch("http://localhost:9000/addMedication", {
-//     method: "POST",
-//     body: JSON.stringify({
-//       medicationName: medicationName,
-//       grams: grams,
-//       additionalInfo: additionalInfo,
-//       reminderTime: reminderTime.toISOString(),
-//     }),
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//   })
-//     .then((res) => {
-//       if (res.status === 200) {
-//         alert("Your med reminder has been set! You will be notified in due time");
-//       }
-//       return res.json();
-//     })
-
-//     .catch((error) => {
-//       console.error("Error during API call:", error);
-//     });
-// }
 
 
 function storeMedDetails(medicationName, reminderTime, grams, additionalInfo) {

@@ -2,7 +2,7 @@
 
 
 body {
-    background-image: url("/views/home/Images/bgImage.jpg");
+    background-image: url("./Images/bgImage.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     overflow-y: scroll;
@@ -43,7 +43,7 @@ label {
 }
 
 input,
-button {
+button, a {
     margin-bottom: 15px;
     padding: 12px;
     font-size: 16px;
@@ -51,7 +51,7 @@ button {
     border-radius: 5px;
 }
 
-button {
+button, a{
     background-color: #558af5;
     color: white;
     cursor: pointer;

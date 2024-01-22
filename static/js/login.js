@@ -2,12 +2,12 @@ document
   .getElementById("loginForm")
   .addEventListener("submit", async function (event) {
     event.preventDefault(); // Prevent the form from submitting normally
-
+    console.log("ouihfa");
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
     try {
-      const response = await fetch("http://localhost:9000/login", {
+      const response = await fetch("/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -17,7 +17,7 @@ document
 
       if (response.status === 200) {
         alert("Login successful");
-        window.location.href = "http://127.0.0.1:5500/views/home/home.html";
+        window.location.href = "../home/home.html";
       } else if (response.status === 400) {
         const errorMessage = await response.text();
 
