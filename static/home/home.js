@@ -36,14 +36,35 @@ function setReminder(alarmTime, message) {
   }, timeUntilAlarm);
 }
 
-// if ("serviceWorker" in navigator) {
-//   // setReminder(reminderTime, messageFormat);
-//   send(medicationName).catch((error) => console.log(error));
-// }
 
-// Register the service worker, the push and we send the push or notification.
+async function fetchUsername() {
+  try {
+    const response = await fetch("/getUsername", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch username");
+    }
+
+    const data = await response.json();
+    const username = data.username;
+
+    const showUsernameContainer = document.getElementById("showUsername");
+    showUsernameContainer.innerHTML = `<span>Welcome, ${username}!</span>`;
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchUsername();
+
+
 async function send(medicationName) {
-  // Register service worker
   console.log(medicationName);
   console.log("Registering service worker");
   const register = await navigator.serviceWorker.register(
@@ -87,7 +108,10 @@ function storeMedDetails(medicationName, reminderTime, grams, additionalInfo) {
     }),
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${document.cookie.split('=')[1]}`,
+
     },
+
   })
     .then((res) => {
       if (res.status === 200) {

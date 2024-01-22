@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Medications</title>
-</head>
+    <style>
+      .medication-card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
 
-<body>
-    <h1>User Medications</h1>
-    <ul id="medications-list"></ul>
+  <body>
+    <h1 id="showUsername"></h1>
+    <div id="medicationList"></div>
 
     <script src="./medication.js"></script>
-</body>
-
+  </body>
 </html>

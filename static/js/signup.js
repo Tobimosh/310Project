@@ -1,7 +1,7 @@
 document.getElementById("signupForm").addEventListener("submit", async function (event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+    event.preventDefault();
 
-    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
     const sex = document.getElementById("sex").value;
     const firstName = document.getElementById("firstName").value;
     const lastName = document.getElementById("lastName").value;
@@ -13,7 +13,7 @@ document.getElementById("signupForm").addEventListener("submit", async function 
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ email, sex, firstName, lastName, password }),
+            body: JSON.stringify({ username, sex, firstName, lastName, password }),
         });
 
         if (response.status === 200) {

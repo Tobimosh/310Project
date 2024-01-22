@@ -17,7 +17,7 @@ connect
 var db = mongoose.connection;
 
 const UserSchema = new mongoose.Schema({
-  email: {
+  username: {
     type: String,
     required: true,
   },
