@@ -1,10 +1,8 @@
 const express = require("express");
 const path = require("path");
-const bcrypt = require("bcrypt");
 const cors = require("cors");
 const { User, medication } = require("./static/js/config");
 const webpush = require("web-push");
-const session = require("express-session");
 const app = express();
 const verfiyToken = require("./verifyToken");
 const jwt = require("jsonwebtoken");

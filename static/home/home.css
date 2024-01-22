@@ -48,11 +48,12 @@ label {
 
 input,
 button, a {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 button, a{
@@ -60,6 +61,7 @@ button, a{
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+        text-decoration: none;
 }
 
 #additionalInfo{
